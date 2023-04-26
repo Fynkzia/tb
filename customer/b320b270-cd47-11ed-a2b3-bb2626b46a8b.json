@@ -13,7 +13,10 @@
     "country" : null,
     "customerId" : null,
     "email" : null,
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "b320b270-cd47-11ed-a2b3-bb2626b46a8b"
+    },
     "id" : {
       "entityType" : "CUSTOMER",
       "id" : "b320b270-cd47-11ed-a2b3-bb2626b46a8b"

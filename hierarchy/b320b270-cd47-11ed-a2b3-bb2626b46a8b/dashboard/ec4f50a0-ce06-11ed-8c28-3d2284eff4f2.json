@@ -549,7 +549,7 @@
       },
       "entityAliases" : {
         "59dfd6ba-ba4a-9ab7-3f4f-f2c595270f96" : {
-          "id" : "59dfd6ba-ba4a-9ab7-3f4f-f2c595270f96",
+          "id" : "91ff5360-e333-11ed-852e-0fb87d32f9bf",
           "alias" : "Станция",
           "filter" : {
             "type" : "singleEntity",
@@ -561,7 +561,7 @@
           }
         },
         "730f6be7-448b-71b5-13c6-7577a0ec42ef" : {
-          "id" : "730f6be7-448b-71b5-13c6-7577a0ec42ef",
+          "id" : "91ff5360-e333-11ed-852e-0fb87d32f9bf",
           "alias" : "entity list",
           "filter" : {
             "type" : "entityList",
@@ -571,7 +571,7 @@
           }
         },
         "08802852-144f-ab43-9d16-f2a042c92524" : {
-          "id" : "08802852-144f-ab43-9d16-f2a042c92524",
+          "id" : "91ff5360-e333-11ed-852e-0fb87d32f9bf",
           "alias" : "entity-from-state",
           "filter" : {
             "type" : "stateEntity",
@@ -626,7 +626,10 @@
       "entityType" : "CUSTOMER",
       "id" : "b320b270-cd47-11ed-a2b3-bb2626b46a8b"
     },
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "DASHBOARD",
+      "id" : "ec4f50a0-ce06-11ed-8c28-3d2284eff4f2"
+    },
     "id" : {
       "entityType" : "DASHBOARD",
       "id" : "ec4f50a0-ce06-11ed-8c28-3d2284eff4f2"

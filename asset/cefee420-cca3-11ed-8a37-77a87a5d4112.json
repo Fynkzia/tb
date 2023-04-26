@@ -10,7 +10,10 @@
       "entityType" : "CUSTOMER",
       "id" : "13814000-1dd2-11b2-8080-808080808080"
     },
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "ASSET",
+      "id" : "cefee420-cca3-11ed-8a37-77a87a5d4112"
+    },
     "id" : {
       "entityType" : "ASSET",
       "id" : "cefee420-cca3-11ed-8a37-77a87a5d4112"

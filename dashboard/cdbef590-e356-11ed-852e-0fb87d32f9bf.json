@@ -1,0 +1,226 @@
+{
+  "entityType" : "DASHBOARD",
+  "entity" : {
+    "assignedCustomers" : null,
+    "configuration" : {
+      "description" : "",
+      "widgets" : {
+        "d7117ff4-df53-0c77-362d-3e6295d95984" : {
+          "isSystemType" : true,
+          "bundleAlias" : "entity_admin_widgets",
+          "typeAlias" : "asset_admin_table",
+          "type" : "latest",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 7.5,
+          "sizeY" : 6.5,
+          "config" : {
+            "timewindow" : {
+              "displayValue" : "",
+              "selectedTab" : 0,
+              "realtime" : {
+                "realtimeType" : 1,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "history" : {
+                "historyType" : 0,
+                "interval" : 1000,
+                "timewindowMs" : 60000,
+                "fixedTimewindow" : {
+                  "startTimeMs" : 1682428146168,
+                  "endTimeMs" : 1682514546168
+                },
+                "quickInterval" : "CURRENT_DAY"
+              },
+              "aggregation" : {
+                "type" : "NONE",
+                "limit" : 200
+              }
+            },
+            "showTitle" : true,
+            "backgroundColor" : "rgb(255, 255, 255)",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "4px",
+            "settings" : {
+              "enableSearch" : true,
+              "displayPagination" : true,
+              "defaultPageSize" : 10,
+              "defaultSortOrder" : "entityName",
+              "displayEntityName" : true,
+              "displayEntityType" : true,
+              "entitiesTitle" : "Asset admin table",
+              "enableSelectColumnDisplay" : true
+            },
+            "title" : "New Asset admin table",
+            "dropShadow" : true,
+            "enableFullscreen" : true,
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400,
+              "padding" : "5px 10px 5px 10px"
+            },
+            "useDashboardTimewindow" : false,
+            "showLegend" : false,
+            "datasources" : [ {
+              "type" : "entity",
+              "name" : null,
+              "entityAliasId" : "f4a29435-b26f-a908-6427-54b9dc557519",
+              "filterId" : null,
+              "dataKeys" : [ ]
+            } ],
+            "showTitleIcon" : false,
+            "titleIcon" : "more_horiz",
+            "iconColor" : "rgba(0, 0, 0, 0.87)",
+            "iconSize" : "24px",
+            "titleTooltip" : "",
+            "widgetStyle" : { },
+            "displayTimewindow" : true,
+            "actions" : {
+              "headerButton" : [ {
+                "name" : "Add asset",
+                "icon" : "add",
+                "type" : "customPretty",
+                "customHtml" : "<form #addAssetForm=\"ngForm\" [formGroup]=\"addAssetFormGroup\"\n      (ngSubmit)=\"save()\" style=\"width: 480px;\">\n  <mat-toolbar fxLayout=\"row\" color=\"primary\">\n    <h2>Add asset</h2>\n    <span fxFlex></span>\n    <button mat-button mat-icon-button\n            (click)=\"cancel()\"\n            type=\"button\">\n      <mat-icon class=\"material-icons\">close</mat-icon>\n    </button>\n  </mat-toolbar>\n  <mat-progress-bar color=\"warn\" mode=\"indeterminate\" *ngIf=\"isLoading$ | async\">\n  </mat-progress-bar>\n  <div style=\"height: 4px;\" *ngIf=\"!(isLoading$ | async)\"></div>\n  <div mat-dialog-content>\n      <div class=\"mat-padding\" fxLayout=\"column\">\n            <mat-form-field class=\"mat-block\">\n                <mat-label>Asset name</mat-label>\n                <input matInput formControlName=\"assetName\" required>\n                <mat-error *ngIf=\"addAssetFormGroup.get('assetName').hasError('required')\">\n                    Asset name is required.\n                </mat-error>\n            </mat-form-field>\n            <div fxLayout=\"row\" fxLayoutGap=\"8px\">\n                <tb-entity-subtype-autocomplete\n                    fxFlex=\"50\"\n                    formControlName=\"assetType\"\n                    [required]=\"true\"\n                    [entityType]=\"'ASSET'\"\n                ></tb-entity-subtype-autocomplete>\n                <mat-form-field fxFlex=\"50\" class=\"mat-block\">\n                    <mat-label>Label</mat-label>\n                    <input matInput formControlName=\"assetLabel\">\n                </mat-form-field>\n            </div>\n            <div formGroupName=\"attributes\" fxLayout=\"row\" fxLayoutGap=\"8px\">\n                <mat-form-field fxFlex=\"50\" class=\"mat-block\">\n                    <mat-label>Latitude</mat-label>\n                    <input type=\"number\" step=\"any\" matInput formControlName=\"latitude\">\n                </mat-form-field>\n                <mat-form-field fxFlex=\"50\" class=\"mat-block\">\n                    <mat-label>Longitude</mat-label>\n                    <input type=\"number\" step=\"any\" matInput formControlName=\"longitude\">\n                </mat-form-field>\n            </div>\n      </div>  \n  </div>\n  <div mat-dialog-actions fxLayout=\"row\">\n    <span fxFlex></span>\n    <button mat-button color=\"primary\"\n            type=\"button\"\n            [disabled]=\"(isLoading$ | async)\"\n            (click)=\"cancel()\" cdkFocusInitial>\n      Cancel\n    </button>\n    <button mat-button mat-raised-button color=\"primary\"\n            style=\"margin-right: 20px;\"\n            type=\"submit\"\n            [disabled]=\"(isLoading$ | async) || addAssetForm.invalid || !addAssetForm.dirty\">\n      Create\n    </button>\n  </div>\n</form>\n",
+                "customCss" : "",
+                "customFunction" : "let $injector = widgetContext.$scope.$injector;\nlet customDialog = $injector.get(widgetContext.servicesMap.get('customDialog'));\nlet assetService = $injector.get(widgetContext.servicesMap.get('assetService'));\nlet attributeService = $injector.get(widgetContext.servicesMap.get('attributeService'));\n\nopenAddAssetDialog();\n\nfunction openAddAssetDialog() {\n    customDialog.customDialog(htmlTemplate, AddAssetDialogController).subscribe();\n}\n\nfunction AddAssetDialogController(instance) {\n    let vm = instance;\n    \n    vm.addAssetFormGroup = vm.fb.group({\n      assetName: ['', [vm.validators.required]],\n      assetType: ['', [vm.validators.required]],\n      assetLabel: [''],\n      attributes: vm.fb.group({\n          latitude: [null],\n          longitude: [null]\n      })      \n    });\n    \n    vm.cancel = function() {\n        vm.dialogRef.close(null);\n    };\n    \n    vm.save = function() {\n        vm.addAssetFormGroup.markAsPristine();\n        let asset = {\n            name: vm.addAssetFormGroup.get('assetName').value,\n            type: vm.addAssetFormGroup.get('assetType').value,\n            label: vm.addAssetFormGroup.get('assetLabel').value\n        };\n        assetService.saveAsset(asset).subscribe(\n            function (asset) {\n                saveAttributes(asset.id).subscribe(\n                    function () {\n                        widgetContext.updateAliases();\n                        vm.dialogRef.close(null);\n                    }\n                );\n            }\n        );\n    };\n    \n    function saveAttributes(entityId) {\n        let attributes = vm.addAssetFormGroup.get('attributes').value;\n        let attributesArray = [];\n        for (let key in attributes) {\n            attributesArray.push({key: key, value: attributes[key]});\n        }\n        if (attributesArray.length > 0) {\n            return attributeService.saveEntityAttributes(entityId, \"SERVER_SCOPE\", attributesArray);\n        } else {\n            return widgetContext.rxjs.of([]);\n        }\n    }\n}",
+                "customResources" : [ ],
+                "id" : "70837a9d-c3de-a9a7-03c5-dccd14998758"
+              } ],
+              "actionCellButton" : [ {
+                "name" : "Edit asset",
+                "icon" : "edit",
+                "type" : "customPretty",
+                "customHtml" : "<form #editAssetForm=\"ngForm\" [formGroup]=\"editAssetFormGroup\"\n      (ngSubmit)=\"save()\" style=\"width: 480px;\">\n  <mat-toolbar fxLayout=\"row\" color=\"primary\">\n    <h2>Edit asset</h2>\n    <span fxFlex></span>\n    <button mat-button mat-icon-button\n            (click)=\"cancel()\"\n            type=\"button\">\n      <mat-icon class=\"material-icons\">close</mat-icon>\n    </button>\n  </mat-toolbar>\n  <mat-progress-bar color=\"warn\" mode=\"indeterminate\" *ngIf=\"isLoading$ | async\">\n  </mat-progress-bar>\n  <div style=\"height: 4px;\" *ngIf=\"!(isLoading$ | async)\"></div>\n  <div mat-dialog-content>\n      <div class=\"mat-padding\" fxLayout=\"column\">\n            <mat-form-field class=\"mat-block\">\n                <mat-label>Asset name</mat-label>\n                <input matInput formControlName=\"assetName\" required>\n                <mat-error *ngIf=\"editAssetFormGroup.get('assetName').hasError('required')\">\n                    Asset name is required.\n                </mat-error>\n            </mat-form-field>\n            <div fxLayout=\"row\" fxLayoutGap=\"8px\">\n                <tb-entity-subtype-autocomplete\n                    fxFlex=\"50\"\n                    formControlName=\"assetType\"\n                    [required]=\"true\"\n                    [entityType]=\"'ASSET'\"\n                ></tb-entity-subtype-autocomplete>\n                <mat-form-field fxFlex=\"50\" class=\"mat-block\">\n                    <mat-label>Label</mat-label>\n                    <input matInput formControlName=\"assetLabel\">\n                </mat-form-field>\n            </div>\n            <div formGroupName=\"attributes\" fxLayout=\"row\" fxLayoutGap=\"8px\">\n                <mat-form-field fxFlex=\"50\" class=\"mat-block\">\n                    <mat-label>Latitude</mat-label>\n                    <input type=\"number\" step=\"any\" matInput formControlName=\"latitude\">\n                </mat-form-field>\n                <mat-form-field fxFlex=\"50\" class=\"mat-block\">\n                    <mat-label>Longitude</mat-label>\n                    <input type=\"number\" step=\"any\" matInput formControlName=\"longitude\">\n                </mat-form-field>\n            </div>\n      </div>  \n  </div>\n  <div mat-dialog-actions fxLayout=\"row\">\n    <span fxFlex></span>\n    <button mat-button color=\"primary\"\n            type=\"button\"\n            [disabled]=\"(isLoading$ | async)\"\n            (click)=\"cancel()\" cdkFocusInitial>\n      Cancel\n    </button>\n    <button mat-button mat-raised-button color=\"primary\"\n            type=\"submit\"\n            style=\"margin-right: 20px;\"\n            [disabled]=\"(isLoading$ | async) || editAssetForm.invalid || !editAssetForm.dirty\">\n      Update\n    </button>\n  </div>\n</form>\n",
+                "customCss" : "",
+                "customFunction" : "let $injector = widgetContext.$scope.$injector;\nlet customDialog = $injector.get(widgetContext.servicesMap.get('customDialog'));\nlet assetService = $injector.get(widgetContext.servicesMap.get('assetService'));\nlet attributeService = $injector.get(widgetContext.servicesMap.get('attributeService'));\n\nopenEditAssetDialog();\n\nfunction openEditAssetDialog() {\n    customDialog.customDialog(htmlTemplate, EditAssetDialogController).subscribe();\n}\n\nfunction EditAssetDialogController(instance) {\n    let vm = instance;\n    \n    vm.asset = null;\n    vm.attributes = {};\n    \n    vm.editAssetFormGroup = vm.fb.group({\n      assetName: ['', [vm.validators.required]],\n      assetType: ['', [vm.validators.required]],\n      assetLabel: [''],\n      attributes: vm.fb.group({\n          latitude: [null],\n          longitude: [null]\n      })      \n    });\n    \n    vm.cancel = function() {\n        vm.dialogRef.close(null);\n    };\n    \n    vm.save = function() {\n        vm.editAssetFormGroup.markAsPristine();\n        vm.asset.name = vm.editAssetFormGroup.get('assetName').value,\n        vm.asset.type = vm.editAssetFormGroup.get('assetType').value,\n        vm.asset.label = vm.editAssetFormGroup.get('assetLabel').value\n        assetService.saveAsset(vm.asset).subscribe(\n            function () {\n                saveAttributes().subscribe(\n                    function () {\n                        widgetContext.updateAliases();\n                        vm.dialogRef.close(null);\n                    }\n                );\n            }\n        );\n    };\n    \n    getEntityInfo();\n    \n    function getEntityInfo() {\n        assetService.getAsset(entityId.id).subscribe(\n            function (asset) {\n                attributeService.getEntityAttributes(entityId, 'SERVER_SCOPE',\n                                                    ['latitude', 'longitude']).subscribe(\n                   function (attributes) {\n                        for (let i = 0; i < attributes.length; i++) {\n                            vm.attributes[attributes[i].key] = attributes[i].value; \n                        }\n                        vm.asset = asset;\n                        vm.editAssetFormGroup.patchValue(\n                            {\n                                assetName: vm.asset.name,\n                                assetType: vm.asset.type,\n                                assetLabel: vm.asset.label,\n                                attributes: {\n                                    latitude: vm.attributes.latitude,\n                                    longitude: vm.attributes.longitude\n                                }\n                            }, {emitEvent: false}\n                        );\n                   } \n                );\n            }\n        );    \n    }\n    \n    function saveAttributes() {\n        let attributes = vm.editAssetFormGroup.get('attributes').value;\n        let attributesArray = [];\n        for (let key in attributes) {\n            attributesArray.push({key: key, value: attributes[key]});\n        }\n        if (attributesArray.length > 0) {\n            return attributeService.saveEntityAttributes(entityId, 'SERVER_SCOPE', attributesArray);\n        } else {\n            return widgetContext.rxjs.of([]);\n        }\n    }\n}",
+                "customResources" : [ ],
+                "id" : "93931e52-5d7c-903e-67aa-b9435df44ff4"
+              }, {
+                "name" : "Delete asset",
+                "icon" : "delete",
+                "type" : "custom",
+                "customFunction" : "let $injector = widgetContext.$scope.$injector;\nlet dialogs = $injector.get(widgetContext.servicesMap.get('dialogs'));\nlet assetService = $injector.get(widgetContext.servicesMap.get('assetService'));\n\nopenDeleteAssetDialog();\n\nfunction openDeleteAssetDialog() {\n    let title = \"Are you sure you want to delete the asset \" + entityName +  \"?\";\n    let content = \"Be careful, after the confirmation, the asset and all related data will become unrecoverable!\";\n    dialogs.confirm(title, content, 'Cancel', 'Delete').subscribe(\n        function (result) {\n            if (result) {\n                deleteAsset();\n            }\n        }\n    );\n}\n\nfunction deleteAsset() {\n    assetService.deleteAsset(entityId.id).subscribe(\n        function () {\n            widgetContext.updateAliases();\n        }\n    );\n}\n",
+                "id" : "ec2708f6-9ff0-186b-e4fc-7635ebfa3074"
+              } ],
+              "rowClick" : [ {
+                "name" : "more info",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "custom",
+                "customFunction" : "// Class definitions must come before there use\r\nclass PageLink {\r\n  constructor(pageSize, page = 0, textSearch = null, sortOrder = null) {\r\n    this.textSearch = textSearch;\r\n    this.pageSize = pageSize;\r\n    this.page = page;\r\n    this.sortOrder = sortOrder;\r\n  }\r\n\r\n  toQuery() {\r\n    let query = `?pageSize=${this.pageSize}&page=${this.page}`;\r\n    if (this.textSearch && this.textSearch.length) {\r\n      const textSearch = encodeURIComponent(this.textSearch);\r\n      query += `&textSearch=${textSearch}`;\r\n    }\r\n    if (this.sortOrder) {\r\n      query += `&sortProperty=${this.sortOrder.property}&sortOrder=${this.sortOrder.direction}`;\r\n    }\r\n    return query;\r\n  }\r\n}\r\nlet targetDashboardName;\r\nlet itemObservable;\r\nlet deviceObservable = widgetContext.deviceService.getDevice(entityId.id);\r\nlet assetObservable = widgetContext.assetService.getAsset(entityId.id);\r\n\r\nif(entityId.entityType == 'ASSET') {\r\n    itemObservable = assetObservable;\r\n    targetDashboardName = \"asset db\";\r\n\r\n}\r\nif(entityId.entityType == 'DEVICE') {\r\n    itemObservable = deviceObservable;\r\n    targetDashboardName = \"device db\";\r\n}\r\n\r\nitemObservable.toPromise().then(function(itemResponse) {\r\n\r\n    const pageLink = new PageLink(\r\n        200, //pageSize\r\n        0,   //page\r\n        \"\",  //textSearch\r\n        {\r\n            property:  \"title\",\r\n            direction: \"ASC\"\r\n        }\r\n    );\r\n    const targetEntityParamName   = \"\"; //stateEntityParamName;\r\n    const targetEntityId          = entityId;\r\n    let   targetDashboardStateId  = \"\";\r\n    let   openNewBrowserTab       = false;\r\n    let   customerPathType        = 0;\r\n    let   customerPath            = \"\";\r\n    let   dashboardPathType       = 0;\r\n    let   dashboardPath           = \"\";\r\n    let   dashboardListObservable = widgetContext.dashboardService.getTenantDashboards(pageLink, {ignoreLoading: true});\r\n\r\n    dashboardListObservable.toPromise().then(function(dashboardListResponse) {\r\n\r\n        let currentUrl = window.location.toString();\r\n\r\n        if (currentUrl.indexOf(\"customerGroups\") != -1) {\r\n            customerPathType = 1;\r\n            customerPath = currentUrl.substring(currentUrl.indexOf(\"customerGroups/\"), currentUrl.indexOf(\"/\", currentUrl.indexOf(\"/\", currentUrl.indexOf(\"customerGroups/\") + 15) + 1));\r\n        }\r\n\r\n        if (currentUrl.indexOf(\"dashboardGroups/\") != -1) {\r\n            dashboardPathType = 1;\r\n            dashboardPath = currentUrl.substring(currentUrl.indexOf(\"dashboardGroups/\"), currentUrl.indexOf(\"/\", currentUrl.indexOf(\"dashboardGroups/\") + 16));\r\n        }\r\n        else if (currentUrl.indexOf(\"dashboards/\") != -1) {\r\n            dashboardPathType = 2;\r\n            dashboardPath = \"dashboards\";\r\n        }\r\n        else if (currentUrl.indexOf(\"dashboard/\") != -1) {\r\n            dashboardPathType = 3;\r\n            dashboardPath = \"dashboard\";\r\n        }\r\n\r\n        //get dashboard by name\r\n        let targetDashboardId = null;\r\n        let dashboardListResponseDataIndex = dashboardListResponse.data.map(function(a) { return a.title; }).indexOf(targetDashboardName);\r\n        if (dashboardListResponseDataIndex > -1) {\r\n            targetDashboardId = dashboardListResponse.data[dashboardListResponseDataIndex].id.id;\r\n        }\r\n\r\n        const stateObject  = {};\r\n        stateObject.params = {};\r\n\r\n        updateEntityParams(stateObject.params, targetEntityParamName, targetEntityId, entityName, entityLabel);\r\n\r\n        //get dashboard state by name??\r\n\r\n        if (targetDashboardStateId) {\r\n            stateObject.id = targetDashboardStateId;\r\n        }\r\n\r\n        const state = objToBase64URI([ stateObject ]);\r\n        let newUrl = \"/\";\r\n\r\n        // \"dashboard/\" is used when you want to introduce exactly that dashboard full screen.\r\n        // \"dashboards/\" is used when you want you dashboards (left nav bar), but without breadcrumb with a link to the group.\r\n        // \"dashboardGroups/\" is used when you want all hierarchy to your dashboard (left nav bar and breadcrumb).\r\n\r\n        if (customerPathType != 0) {\r\n            newUrl += `${customerPath}/`;\r\n        }\r\n\r\n        if (dashboardPathType != 0) {\r\n            newUrl += `${dashboardPath}/`;\r\n        }\r\n\r\n        newUrl += `${targetDashboardId}?state=${state}`;\r\n\r\n        if (openNewBrowserTab) {\r\n            window.open(newUrl, '_blank');\r\n        } else {\r\n            widgetContext.router.navigateByUrl(newUrl);\r\n        }\r\n    }).catch((error) => {\r\n      console.error(error);\r\n    });\r\n}).catch((error) => {\r\n  console.error(error);\r\n});\r\n\r\nfunction updateEntityParams(params /*StateParams*/, targetEntityParamName /*string?*/, targetEntityId /*EntityId*/, entityName /*string?*/, entityLabel /*string?*/) {\r\n    if (targetEntityId) {\r\n        let targetEntityParams;\r\n        \r\n        if (targetEntityParamName && targetEntityParamName.length) {\r\n            targetEntityParams = params[targetEntityParamName];\r\n            \r\n            if (!targetEntityParams) {\r\n                targetEntityParams = {};\r\n                params[targetEntityParamName] = targetEntityParams;\r\n                params.targetEntityParamName = targetEntityParamName;\r\n            }\r\n        } else {\r\n            targetEntityParams = params;\r\n        }\r\n        targetEntityParams.entityId = targetEntityId;\r\n        if (entityName) {\r\n            targetEntityParams.entityName = entityName;\r\n        }\r\n        if (entityLabel) {\r\n            targetEntityParams.entityLabel = entityLabel;\r\n        }\r\n    }\r\n}\r\n\r\nfunction objToBase64(obj /*any*/) {\r\n    const json = JSON.stringify(obj);\r\n    \r\n    return btoa(encodeURIComponent(json).replace(/%([0-9A-F]{2})/g,\r\n        function toSolidBytes(match, p1) {\r\n            return String.fromCharCode(Number('0x' + p1));\r\n        }));\r\n}\r\n\r\nfunction objToBase64URI(obj /*any*/) {\r\n    return encodeURIComponent(objToBase64(obj));\r\n}",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "e4dd7307-90df-a819-d01b-683d9f5fdd82"
+              } ]
+            }
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "d7117ff4-df53-0c77-362d-3e6295d95984"
+        }
+      },
+      "states" : {
+        "default" : {
+          "name" : "asset db",
+          "root" : true,
+          "layouts" : {
+            "main" : {
+              "widgets" : {
+                "d7117ff4-df53-0c77-362d-3e6295d95984" : {
+                  "sizeX" : 11,
+                  "sizeY" : 8,
+                  "row" : 0,
+                  "col" : 0
+                }
+              },
+              "gridSettings" : {
+                "backgroundColor" : "#eeeeee",
+                "columns" : 24,
+                "margin" : 10,
+                "backgroundSizeMode" : "100%"
+              }
+            }
+          }
+        }
+      },
+      "entityAliases" : {
+        "f4a29435-b26f-a908-6427-54b9dc557519" : {
+          "id" : "f4a29435-b26f-a908-6427-54b9dc557519",
+          "alias" : "asset",
+          "filter" : {
+            "type" : "relationsQuery",
+            "resolveMultiple" : true,
+            "rootStateEntity" : true,
+            "stateEntityParamName" : null,
+            "defaultStateEntity" : null,
+            "rootEntity" : null,
+            "direction" : "FROM",
+            "maxLevel" : 1,
+            "fetchLastLevelOnly" : false,
+            "filters" : [ ]
+          }
+        }
+      },
+      "filters" : { },
+      "timewindow" : {
+        "displayValue" : "",
+        "hideInterval" : false,
+        "hideLastInterval" : false,
+        "hideQuickInterval" : false,
+        "hideAggregation" : false,
+        "hideAggInterval" : false,
+        "hideTimezone" : false,
+        "selectedTab" : 0,
+        "realtime" : {
+          "realtimeType" : 0,
+          "interval" : 1000,
+          "timewindowMs" : 60000,
+          "quickInterval" : "CURRENT_DAY"
+        },
+        "history" : {
+          "historyType" : 0,
+          "interval" : 1000,
+          "timewindowMs" : 60000,
+          "fixedTimewindow" : {
+            "startTimeMs" : 1682333351330,
+            "endTimeMs" : 1682419751330
+          },
+          "quickInterval" : "CURRENT_DAY"
+        },
+        "aggregation" : {
+          "type" : "AVG",
+          "limit" : 25000
+        }
+      },
+      "settings" : {
+        "stateControllerId" : "entity",
+        "showTitle" : false,
+        "showDashboardsSelect" : true,
+        "showEntitiesSelect" : true,
+        "showDashboardTimewindow" : true,
+        "showDashboardExport" : true,
+        "toolbarAlwaysOpen" : true
+      }
+    },
+    "customerId" : null,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "DASHBOARD",
+      "id" : "cdbef590-e356-11ed-852e-0fb87d32f9bf"
+    },
+    "image" : null,
+    "mobileHide" : false,
+    "mobileOrder" : null,
+    "name" : "asset db",
+    "ownerId" : null,
+    "title" : "asset db"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  }
+}

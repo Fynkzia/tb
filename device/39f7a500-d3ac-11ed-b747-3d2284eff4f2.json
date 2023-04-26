@@ -22,7 +22,10 @@
       "entityType" : "DEVICE_PROFILE",
       "id" : "15e6d430-cd6a-11ed-8f04-91b88e4188de"
     },
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "DEVICE",
+      "id" : "39f7a500-d3ac-11ed-b747-3d2284eff4f2"
+    },
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE",
@@ -35,18 +38,30 @@
     "type" : "default"
   },
   "credentials" : {
-    "credentialsId" : "zhTTGzNZ1LiDIwjekRAN",
+    "credentialsId" : "MrsG3ckAL5y1vGUkfUJr",
     "credentialsType" : "ACCESS_TOKEN",
     "credentialsValue" : null
   },
-  "relations" : [ ],
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "4bb1ea80-daaa-11ed-ab36-91b88e4188de"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "39f7a500-d3ac-11ed-b747-3d2284eff4f2"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
-      "booleanValue" : false,
+      "booleanValue" : true,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1680786576885,
+      "lastUpdateTs" : 1682502527646,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -62,24 +77,24 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1680785942876,
-      "longValue" : 1680785941327,
+      "lastUpdateTs" : 1682515012750,
+      "longValue" : 1682515009663,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1680784750265,
-      "longValue" : 1680784750265,
+      "lastUpdateTs" : 1682502533267,
+      "longValue" : 1682502533267,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1680785941329,
-      "longValue" : 1680785941329,
+      "lastUpdateTs" : 1682502528172,
+      "longValue" : 1682502528172,
       "strValue" : null
     }, {
       "booleanValue" : null,

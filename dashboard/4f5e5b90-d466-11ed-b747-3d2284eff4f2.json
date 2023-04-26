@@ -30,8 +30,8 @@
                 "interval" : 1000,
                 "timewindowMs" : 60000,
                 "fixedTimewindow" : {
-                  "startTimeMs" : 1682238240515,
-                  "endTimeMs" : 1682324640515
+                  "startTimeMs" : 1682427627304,
+                  "endTimeMs" : 1682514027304
                 },
                 "quickInterval" : "CURRENT_DAY"
               },
@@ -189,8 +189,8 @@
                 "interval" : 1000,
                 "timewindowMs" : 60000,
                 "fixedTimewindow" : {
-                  "startTimeMs" : 1682238240515,
-                  "endTimeMs" : 1682324640515
+                  "startTimeMs" : 1682427627304,
+                  "endTimeMs" : 1682514027304
                 },
                 "quickInterval" : "CURRENT_DAY"
               },
@@ -343,8 +343,8 @@
                 "interval" : 1000,
                 "timewindowMs" : 60000,
                 "fixedTimewindow" : {
-                  "startTimeMs" : 1682238240515,
-                  "endTimeMs" : 1682324640515
+                  "startTimeMs" : 1682427627304,
+                  "endTimeMs" : 1682514027304
                 },
                 "quickInterval" : "CURRENT_DAY"
               },
@@ -474,6 +474,21 @@
                 "openInSeparateDialog" : false,
                 "openInPopover" : false,
                 "id" : "ec2708f6-9ff0-186b-e4fc-7635ebfa3074"
+              } ],
+              "rowClick" : [ {
+                "name" : "move to asset db",
+                "icon" : "more_horiz",
+                "useShowWidgetActionFunction" : null,
+                "showWidgetActionFunction" : "return true;",
+                "type" : "openDashboard",
+                "targetDashboardStateId" : null,
+                "setEntityId" : true,
+                "stateEntityParamName" : null,
+                "openNewBrowserTab" : false,
+                "targetDashboardId" : "cdbef590-e356-11ed-852e-0fb87d32f9bf",
+                "openInSeparateDialog" : false,
+                "openInPopover" : false,
+                "id" : "71edb4de-3724-59b4-41ff-b6b8262f0faa"
               } ]
             }
           },
@@ -600,7 +615,10 @@
       }
     },
     "customerId" : null,
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "DASHBOARD",
+      "id" : "4f5e5b90-d466-11ed-b747-3d2284eff4f2"
+    },
     "id" : {
       "entityType" : "DASHBOARD",
       "id" : "4f5e5b90-d466-11ed-b747-3d2284eff4f2"

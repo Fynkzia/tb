@@ -22,7 +22,10 @@
       "entityType" : "DEVICE_PROFILE",
       "id" : "15e6d430-cd6a-11ed-8f04-91b88e4188de"
     },
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "DEVICE",
+      "id" : "7a508900-ce2a-11ed-ae5a-d705b52c9493"
+    },
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE",
@@ -38,7 +41,7 @@
     "type" : "default"
   },
   "credentials" : {
-    "credentialsId" : "R1cfovL1vYAgoAdG845F",
+    "credentialsId" : "eDFL0T88o6wt1pFdaSyq",
     "credentialsType" : "ACCESS_TOKEN",
     "credentialsValue" : null
   },
@@ -77,7 +80,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1680189399585,
+      "lastUpdateTs" : 1682416885976,
       "longValue" : null,
       "strValue" : null
     }, {

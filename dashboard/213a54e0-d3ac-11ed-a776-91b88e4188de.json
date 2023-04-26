@@ -121,8 +121,8 @@
                 "interval" : 1000,
                 "timewindowMs" : 60000,
                 "fixedTimewindow" : {
-                  "startTimeMs" : 1681300299830,
-                  "endTimeMs" : 1681386699830
+                  "startTimeMs" : 1682416379207,
+                  "endTimeMs" : 1682502779207
                 },
                 "quickInterval" : "CURRENT_DAY"
               },
@@ -355,12 +355,10 @@
           "id" : "a5997412-c2b3-f456-5a78-d808f3b5343f",
           "alias" : "Station1",
           "filter" : {
-            "type" : "singleEntity",
+            "type" : "stateEntity",
             "resolveMultiple" : false,
-            "singleEntity" : {
-              "entityType" : "DEVICE",
-              "id" : "39f7a500-d3ac-11ed-b747-3d2284eff4f2"
-            }
+            "stateEntityParamName" : null,
+            "defaultStateEntity" : null
           }
         }
       },
@@ -396,17 +394,27 @@
         }
       },
       "settings" : {
-        "stateControllerId" : "entity",
+        "stateControllerId" : "default",
         "showTitle" : false,
         "showDashboardsSelect" : true,
         "showEntitiesSelect" : true,
         "showDashboardTimewindow" : true,
         "showDashboardExport" : true,
-        "toolbarAlwaysOpen" : true
+        "toolbarAlwaysOpen" : true,
+        "titleColor" : "rgba(0,0,0,0.870588)",
+        "showDashboardLogo" : false,
+        "dashboardLogoUrl" : null,
+        "hideToolbar" : false,
+        "showFilters" : true,
+        "showUpdateDashboardImage" : true,
+        "dashboardCss" : ""
       }
     },
     "customerId" : null,
-    "externalId" : null,
+    "externalId" : {
+      "entityType" : "DASHBOARD",
+      "id" : "213a54e0-d3ac-11ed-a776-91b88e4188de"
+    },
     "id" : {
       "entityType" : "DASHBOARD",
       "id" : "213a54e0-d3ac-11ed-a776-91b88e4188de"
@@ -414,9 +422,9 @@
     "image" : null,
     "mobileHide" : false,
     "mobileOrder" : null,
-    "name" : "user db",
+    "name" : "device db",
     "ownerId" : null,
-    "title" : "user db"
+    "title" : "device db"
   },
   "relations" : [ ],
   "attributes" : {
