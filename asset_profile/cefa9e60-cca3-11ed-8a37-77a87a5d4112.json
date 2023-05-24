@@ -3,6 +3,7 @@
   "entity" : {
     "default" : false,
     "defaultDashboardId" : null,
+    "defaultEdgeRuleChainId" : null,
     "defaultQueueName" : null,
     "defaultRuleChainId" : null,
     "description" : "Default asset profile",

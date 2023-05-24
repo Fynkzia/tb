@@ -3,6 +3,7 @@
   "entity" : {
     "default" : true,
     "defaultDashboardId" : null,
+    "defaultEdgeRuleChainId" : null,
     "defaultQueueName" : null,
     "defaultRuleChainId" : {
       "entityType" : "RULE_CHAIN",

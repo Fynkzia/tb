@@ -1,0 +1,103 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : null,
+    "assetProfileId" : {
+      "entityType" : "ASSET_PROFILE",
+      "id" : "ad437c10-cca3-11ed-a47e-9ba30be05e76"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "11f53f30-f3ec-11ed-8899-9ba30be05e76"
+    },
+    "label" : null,
+    "name" : "Test",
+    "ownerId" : null,
+    "type" : "default"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "11f53f30-f3ec-11ed-8899-9ba30be05e76"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "39f7a500-d3ac-11ed-b747-3d2284eff4f2"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "address",
+      "lastUpdateTs" : 1684243076087,
+      "longValue" : null,
+      "strValue" : "ssss"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "city",
+      "lastUpdateTs" : 1684243076087,
+      "longValue" : null,
+      "strValue" : "sss"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "comment",
+      "lastUpdateTs" : 1684243076087,
+      "longValue" : null,
+      "strValue" : "qawsedrf"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "installationDate",
+      "lastUpdateTs" : 1684243076087,
+      "longValue" : null,
+      "strValue" : "2023-05-09T13:17:00.000Z"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "region",
+      "lastUpdateTs" : 1684243076087,
+      "longValue" : null,
+      "strValue" : "ss"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "responsibleEmail",
+      "lastUpdateTs" : 1684243076087,
+      "longValue" : null,
+      "strValue" : "pervyjfejk0@gmail.com"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "responsibleFullName",
+      "lastUpdateTs" : 1684243076087,
+      "longValue" : null,
+      "strValue" : "Vasya Customer Admin"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "responsibleId",
+      "lastUpdateTs" : 1684243076087,
+      "longValue" : null,
+      "strValue" : "04d88130-e59c-11ed-b919-b1f09ca0f30e"
+    } ]
+  }
+}

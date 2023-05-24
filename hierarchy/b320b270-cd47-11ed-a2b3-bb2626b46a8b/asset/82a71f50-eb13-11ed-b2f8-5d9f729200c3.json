@@ -1,0 +1,90 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : null,
+    "assetProfileId" : {
+      "entityType" : "ASSET_PROFILE",
+      "id" : "ad437c10-cca3-11ed-a47e-9ba30be05e76"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "b320b270-cd47-11ed-a2b3-bb2626b46a8b"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "82a71f50-eb13-11ed-b2f8-5d9f729200c3"
+    },
+    "label" : null,
+    "name" : "ass3",
+    "ownerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "b320b270-cd47-11ed-a2b3-bb2626b46a8b"
+    },
+    "type" : "default"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "ff370d10-eb12-11ed-8899-9ba30be05e76"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "82a71f50-eb13-11ed-b2f8-5d9f729200c3"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "Address",
+      "lastUpdateTs" : 1683270454907,
+      "longValue" : null,
+      "strValue" : "ss"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "City",
+      "lastUpdateTs" : 1683270454907,
+      "longValue" : null,
+      "strValue" : "sd"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "Region",
+      "lastUpdateTs" : 1683270454907,
+      "longValue" : null,
+      "strValue" : "fddf"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "ResponsibleEmail",
+      "lastUpdateTs" : 1683270454907,
+      "longValue" : null,
+      "strValue" : "eee@jdidi.com"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "ResponsibleFullName",
+      "lastUpdateTs" : 1683270454907,
+      "longValue" : null,
+      "strValue" : "another user"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "ResponsibleId",
+      "lastUpdateTs" : 1683270454907,
+      "longValue" : null,
+      "strValue" : "61c5eaa0-eb13-11ed-b2f8-5d9f729200c3"
+    } ]
+  }
+}

@@ -29,7 +29,19 @@
     "title" : "customer first",
     "zip" : null
   },
-  "relations" : [ ],
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "CUSTOMER",
+      "id" : "b320b270-cd47-11ed-a2b3-bb2626b46a8b"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "432b45f0-f558-11ed-b2f8-5d9f729200c3"
+    },
+    "type" : "Owns",
+    "typeGroup" : "COMMON"
+  } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
       "booleanValue" : null,

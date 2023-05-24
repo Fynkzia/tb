@@ -12,7 +12,7 @@
     },
     "firstRuleNodeId" : {
       "entityType" : "RULE_NODE",
-      "id" : "05a21e00-d84f-11ed-8686-9ba30be05e76"
+      "id" : "bbcc7030-e336-11ed-852e-0fb87d32f9bf"
     },
     "id" : {
       "entityType" : "RULE_CHAIN",
@@ -48,7 +48,7 @@
         "layoutY" : 121
       },
       "configuration" : {
-        "restEndpointUrlPattern" : "https://nominatim.openstreetmap.org/search?q=$[Address],$[City],$[Region],Ukraine&format=json",
+        "restEndpointUrlPattern" : "https://nominatim.openstreetmap.org/search?q=$[address],$[city],$[region],Ukraine&format=json",
         "requestMethod" : "GET",
         "useSimpleClientHttpFactory" : false,
         "ignoreRequestBody" : true,
@@ -77,10 +77,11 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "45beac90-d54f-11ed-b747-3d2284eff4f2"
+        "id" : "bbcbfb00-e336-11ed-852e-0fb87d32f9bf"
       },
       "name" : "sendApi",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.rest.TbRestApiCallNode"
     }, {
       "additionalInfo" : {
@@ -98,10 +99,11 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "5b5e7000-d773-11ed-8686-9ba30be05e76"
+        "id" : "bbcc2210-e336-11ed-852e-0fb87d32f9bf"
       },
       "name" : "addLonAndLan",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
     }, {
       "additionalInfo" : {
@@ -119,10 +121,11 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "5b5f3350-d773-11ed-8686-9ba30be05e76"
+        "id" : "bbcc4921-e336-11ed-852e-0fb87d32f9bf"
       },
       "name" : "save",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.telemetry.TbMsgAttributesNode"
     }, {
       "additionalInfo" : {
@@ -131,7 +134,7 @@
         "layoutY" : 217
       },
       "configuration" : {
-        "messageNames" : [ "Address" ],
+        "messageNames" : [ "address" ],
         "metadataNames" : [ ],
         "checkAllKeys" : true
       },
@@ -140,10 +143,11 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "05a21e00-d84f-11ed-8686-9ba30be05e76"
+        "id" : "bbcc7030-e336-11ed-852e-0fb87d32f9bf"
       },
       "name" : "isAddress",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.filter.TbCheckMessageNode"
     }, {
       "additionalInfo" : {
@@ -165,10 +169,11 @@
       "externalId" : null,
       "id" : {
         "entityType" : "RULE_NODE",
-        "id" : "cac0b380-d8ff-11ed-ab36-91b88e4188de"
+        "id" : "bbcc7031-e336-11ed-852e-0fb87d32f9bf"
       },
       "name" : "fetchPrevAddress",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.metadata.TbGetAttributesNode"
     } ],
     "ruleChainConnections" : null

@@ -46,7 +46,7 @@
     "additionalInfo" : null,
     "from" : {
       "entityType" : "ASSET",
-      "id" : "4bb1ea80-daaa-11ed-ab36-91b88e4188de"
+      "id" : "11f53f30-f3ec-11ed-8899-9ba30be05e76"
     },
     "to" : {
       "entityType" : "DEVICE",
@@ -57,11 +57,11 @@
   } ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
-      "booleanValue" : true,
+      "booleanValue" : false,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1682502527646,
+      "lastUpdateTs" : 1683558504487,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -69,32 +69,32 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1680786576885,
-      "longValue" : 1680786576883,
+      "lastUpdateTs" : 1683558504487,
+      "longValue" : 1683558504484,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastActivityTime",
-      "lastUpdateTs" : 1682515012750,
-      "longValue" : 1682515009663,
+      "lastUpdateTs" : 1683557857208,
+      "longValue" : 1683557856659,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastConnectTime",
-      "lastUpdateTs" : 1682502533267,
-      "longValue" : 1682502533267,
+      "lastUpdateTs" : 1683555713255,
+      "longValue" : 1683555713255,
       "strValue" : null
     }, {
       "booleanValue" : null,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "lastDisconnectTime",
-      "lastUpdateTs" : 1682502528172,
-      "longValue" : 1682502528172,
+      "lastUpdateTs" : 1683557856670,
+      "longValue" : 1683557856670,
       "strValue" : null
     }, {
       "booleanValue" : null,
@@ -110,6 +110,14 @@
       "jsonValue" : null,
       "key" : "longitude",
       "lastUpdateTs" : 1681207355130,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : true,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "setted",
+      "lastUpdateTs" : 1684490276736,
       "longValue" : null,
       "strValue" : null
     } ],

@@ -1,0 +1,130 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : null,
+    "assetProfileId" : {
+      "entityType" : "ASSET_PROFILE",
+      "id" : "ad437c10-cca3-11ed-a47e-9ba30be05e76"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "b320b270-cd47-11ed-a2b3-bb2626b46a8b"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "ff370d10-eb12-11ed-8899-9ba30be05e76"
+    },
+    "label" : null,
+    "name" : "ass1",
+    "ownerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "b320b270-cd47-11ed-a2b3-bb2626b46a8b"
+    },
+    "type" : "default"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "ff370d10-eb12-11ed-8899-9ba30be05e76"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "82a71f50-eb13-11ed-b2f8-5d9f729200c3"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "ff370d10-eb12-11ed-8899-9ba30be05e76"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "a7c64b90-f305-11ed-8899-9ba30be05e76"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "ff370d10-eb12-11ed-8899-9ba30be05e76"
+    },
+    "to" : {
+      "entityType" : "DEVICE",
+      "id" : "c04c4dd0-cfc0-11ed-9d78-bb2626b46a8b"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "ff370d10-eb12-11ed-8899-9ba30be05e76"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "33ecdb20-eb13-11ed-aa16-771dfd4ce14a"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  }, {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "USER",
+      "id" : "04d88130-e59c-11ed-b919-b1f09ca0f30e"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "ff370d10-eb12-11ed-8899-9ba30be05e76"
+    },
+    "type" : "Manages",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "Address",
+      "lastUpdateTs" : 1683270234411,
+      "longValue" : null,
+      "strValue" : "dsds"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "City",
+      "lastUpdateTs" : 1683270234411,
+      "longValue" : null,
+      "strValue" : "dfssf"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "Region",
+      "lastUpdateTs" : 1683270234411,
+      "longValue" : null,
+      "strValue" : "dsffds"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 13.161571003142324,
+      "jsonValue" : null,
+      "key" : "latitude",
+      "lastUpdateTs" : 1683712915769,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 10.465803436182878,
+      "jsonValue" : null,
+      "key" : "longitude",
+      "lastUpdateTs" : 1683712915769,
+      "longValue" : null,
+      "strValue" : null
+    } ]
+  }
+}

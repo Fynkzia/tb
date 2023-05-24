@@ -19,7 +19,7 @@
             "datasources" : [ {
               "type" : "entity",
               "name" : null,
-              "entityAliasId" : "a5997412-c2b3-f456-5a78-d808f3b5343f",
+              "entityAliasId" : "3e73c633-b69d-c0a1-8c5e-73c9c6002fb1",
               "filterId" : null,
               "dataKeys" : [ {
                 "name" : "pump1.alarm",
@@ -121,8 +121,8 @@
                 "interval" : 1000,
                 "timewindowMs" : 60000,
                 "fixedTimewindow" : {
-                  "startTimeMs" : 1682416379207,
-                  "endTimeMs" : 1682502779207
+                  "startTimeMs" : 1683469322828,
+                  "endTimeMs" : 1683555722828
                 },
                 "quickInterval" : "CURRENT_DAY"
               },
@@ -136,7 +136,7 @@
             "color" : "rgba(0, 0, 0, 0.87)",
             "padding" : "0px",
             "settings" : {
-              "cardHtml" : "<script>\r\n    var firstAlarm = document.getElementById(\"firstAlarm\");\r\n    var secondAlarm = document.getElementById(\"secondAlarm\");\r\n    var thirdAlarm = document.getElementById(\"thirdAlarm\");\r\n    var fourthAlarm = document.getElementById(\"fourthAlarm\");\r\n    var fifthAlarm = document.getElementById(\"fifthAlarm\");\r\n    var sixthAlarm = document.getElementById(\"sixthAlarm\");\r\n    \r\n    var firstStatus = document.getElementById(\"firstStatus\");\r\n    var secondStatus = document.getElementById(\"secondStatus\");\r\n    var thirdStatus = document.getElementById(\"thirdStatus\");\r\n    var fourthStatus = document.getElementById(\"fourthStatus\");\r\n    var fifthStatus = document.getElementById(\"fifthStatus\");\r\n    var sixthStatus = document.getElementById(\"sixthStatus\");\r\n    \r\n    var isThird = (new Boolean(thirdAlarm.innerText)).toString();\r\n    var isFourth = (new Boolean(fourthAlarm.innerText)).toString();\r\n    var isFifth = (new Boolean(fifthAlarm.innerText)).toString();\r\n    var isSixth = (new Boolean(sixthAlarm.innerText)).toString();\r\n\r\n\r\n    if(isThird == \"false\") {\r\n        document.getElementById(\"pump3Cont\").style.display = \"none\";\r\n    }\r\n    if(isFourth == \"false\") {\r\n        document.getElementById(\"pump4Cont\").style.display = \"none\";\r\n    }\r\n    if(isFifth == \"false\") {\r\n        document.getElementById(\"pump5Cont\").style.display = \"none\";\r\n    }\r\n    if(isSixth == \"false\") {\r\n        document.getElementById(\"pump6Cont\").style.display = \"none\";\r\n    }\r\n    function changeColor(content,value){\r\n        switch(value) {\r\n            case \"ok\":\r\n                content.style.backgroundColor = \"#DFFFD8\";\r\n                content.style.color = \"#5D9C59\";\r\n                break;\r\n            case \"failure\":\r\n                content.style.backgroundColor = \"#F7A4A4\";\r\n                content.style.color = \"#EA5455\"\r\n                break;\r\n            case \"warning\":\r\n                content.style.backgroundColor = \"#FDF7C3\";\r\n                content.style.color = \"#EBB02D\";\r\n            default:\r\n                break;\r\n        }\r\n        content.style.textShadow = \"-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white\";\r\n    }\r\n    function addImage(content,value){\r\n        let image = document.createElement(\"img\");\r\n        switch(value){\r\n            case \"idle\":\r\n                image.src = \"https://cdn4.iconfinder.com/data/icons/user-interface-737/32/Wall_Clock-512.png\";\r\n                break;\r\n            case \"working\":\r\n                image.src = \"https://icon-library.com/images/loading-icon-animated-gif/loading-icon-animated-gif-3.jpg\";\r\n                break;\r\n            case \"disconnected\":\r\n                image.src = \"https://ugokawaii.com/wp-content/uploads/2022/06/cross.gif\";\r\n                break;\r\n            default:\r\n            break;\r\n        }\r\n    content.style.textAlign = \"start\";\r\n    content.appendChild(image);\r\n    }\r\n    changeColor(firstAlarm, firstAlarm.innerText);\r\n    changeColor(secondAlarm, secondAlarm.innerText);\r\n    changeColor(thirdAlarm,thirdAlarm.innerText);\r\n    changeColor(fourthAlarm,fourthAlarm.innerText);\r\n    changeColor(fifthAlarm,fifthAlarm.innerText);\r\n    changeColor(sixthAlarm,sixthAlarm.innerText);\r\n    \r\n    addImage(firstStatus,firstStatus.innerText);\r\n    addImage(secondStatus,secondStatus.innerText);\r\n    addImage(thirdStatus,thirdStatus.innerText);\r\n    addImage(fourthStatus,fourthStatus.innerText);\r\n    addImage(fifthStatus,fifthStatus.innerText);\r\n    addImage(sixthStatus,sixthStatus.innerText);\r\n</script>\r\n<div class='card'>\r\n    <h1>Station 1</h1>\r\n    <table class=\"table\">\r\n        <thead>\r\n            <tr>\r\n                <th>Name</th>\r\n                <th>Alarm</th>\r\n                <th>Status</th>\r\n                <th>Go to data</th>\r\n            </tr>\r\n        </thead>\r\n        <tbody>\r\n            <tr id=\"pump1Cont\">\r\n                <td>MPM1</td>\r\n                <td id=\"firstAlarm\">${pump1.alarm}</td>\r\n                <td id=\"firstStatus\">${pump1.status}</td>\r\n                <td>\r\n                    <button id=\"pump1\">\r\n                        Details\r\n                    </button>\r\n                </td>\r\n            </tr>\r\n            <tr id=\"pump2Cont\">\r\n                <td>MPM2</td>\r\n                <td id=\"secondAlarm\">${pump2.alarm}</td>\r\n                <td id=\"secondStatus\">${pump2.status}</td>\r\n                <td>\r\n                    <button id=\"pump2\">\r\n                        Details\r\n                    </button>\r\n                </td>\r\n            </tr>\r\n            <tr id=\"pump3Cont\">\r\n                <td>MPM3</td>\r\n                <td id=\"thirdAlarm\">${pump3.alarm}</td>\r\n                <td id=\"thirdStatus\">${pump3.status}</td>\r\n                <td>\r\n                    <button id=\"pump3\">\r\n                        Details\r\n                    </button>\r\n                </td>\r\n            </tr>\r\n            <tr id=\"pump4Cont\">\r\n                <td>MPM4</td>\r\n                <td id=\"fourthAlarm\">${pump4.alarm}</td>\r\n                <td id=\"fourthStatus\">${pump4.status}</td>\r\n                <td>\r\n                    <button id=\"pump4\">\r\n                        Details\r\n                    </button>\r\n                </td>\r\n            </tr>\r\n            <tr id=\"pump5Cont\">\r\n                <td>MPM5</td>\r\n                <td id=\"fifthAlarm\">${pump5.alarm}</td>\r\n                <td id=\"fifthStatus\">${pump5.status}</td>\r\n                <td>\r\n                    <button id=\"pump5\">\r\n                        Details\r\n                    </button>\r\n                </td>\r\n            </tr>\r\n            <tr id=\"pump6Cont\">\r\n                <td>MPM6</td>\r\n                <td id=\"sixthAlarm\">${pump6.alarm}</td>\r\n                <td id=\"sixthStatus\">${pump6.status}</td>\r\n                <td>\r\n                    <button id=\"pump6\">\r\n                        Details\r\n                    </button>\r\n                </td>\r\n            </tr>\r\n        </tbody>\r\n    </table>\r\n</div>",
+              "cardHtml" : "<script>\r\n    var firstAlarm = document.getElementById(\"firstAlarm\");\r\n    var secondAlarm = document.getElementById(\"secondAlarm\");\r\n    var thirdAlarm = document.getElementById(\"thirdAlarm\");\r\n    var fourthAlarm = document.getElementById(\"fourthAlarm\");\r\n    var fifthAlarm = document.getElementById(\"fifthAlarm\");\r\n    var sixthAlarm = document.getElementById(\"sixthAlarm\");\r\n    \r\n    var firstStatus = document.getElementById(\"firstStatus\");\r\n    var secondStatus = document.getElementById(\"secondStatus\");\r\n    var thirdStatus = document.getElementById(\"thirdStatus\");\r\n    var fourthStatus = document.getElementById(\"fourthStatus\");\r\n    var fifthStatus = document.getElementById(\"fifthStatus\");\r\n    var sixthStatus = document.getElementById(\"sixthStatus\");\r\n    \r\n    var isThird = (new Boolean(thirdAlarm.innerText)).toString();\r\n    var isFourth = (new Boolean(fourthAlarm.innerText)).toString();\r\n    var isFifth = (new Boolean(fifthAlarm.innerText)).toString();\r\n    var isSixth = (new Boolean(sixthAlarm.innerText)).toString();\r\n\r\n\r\n    if(isThird == \"false\") {\r\n        document.getElementById(\"pump3Cont\").style.display = \"none\";\r\n    }\r\n    if(isFourth == \"false\") {\r\n        document.getElementById(\"pump4Cont\").style.display = \"none\";\r\n    }\r\n    if(isFifth == \"false\") {\r\n        document.getElementById(\"pump5Cont\").style.display = \"none\";\r\n    }\r\n    if(isSixth == \"false\") {\r\n        document.getElementById(\"pump6Cont\").style.display = \"none\";\r\n    }\r\n    function changeColor(content,value){\r\n        switch(value) {\r\n            case \"ok\":\r\n                content.style.backgroundColor = \"#DFFFD8\";\r\n                content.style.color = \"#5D9C59\";\r\n                break;\r\n            case \"failure\":\r\n                content.style.backgroundColor = \"#F7A4A4\";\r\n                content.style.color = \"#EA5455\"\r\n                break;\r\n            case \"warning\":\r\n                content.style.backgroundColor = \"#FDF7C3\";\r\n                content.style.color = \"#EBB02D\";\r\n            default:\r\n                break;\r\n        }\r\n        content.style.textShadow = \"-1px 0 white, 0 1px white, 1px 0 white, 0 -1px white\";\r\n    }\r\n    function addImage(content,value){\r\n        let image = document.createElement(\"img\");\r\n        switch(value){\r\n            case \"idle\":\r\n                image.src = \"https://cdn4.iconfinder.com/data/icons/user-interface-737/32/Wall_Clock-512.png\";\r\n                break;\r\n            case \"working\":\r\n                image.src = \"https://icon-library.com/images/loading-icon-animated-gif/loading-icon-animated-gif-3.jpg\";\r\n                break;\r\n            case \"disconnected\":\r\n                image.src = \"https://ugokawaii.com/wp-content/uploads/2022/06/cross.gif\";\r\n                break;\r\n            default:\r\n            break;\r\n        }\r\n    content.style.textAlign = \"start\";\r\n    content.appendChild(image);\r\n    }\r\n    changeColor(firstAlarm, firstAlarm.innerText);\r\n    changeColor(secondAlarm, secondAlarm.innerText);\r\n    changeColor(thirdAlarm,thirdAlarm.innerText);\r\n    changeColor(fourthAlarm,fourthAlarm.innerText);\r\n    changeColor(fifthAlarm,fifthAlarm.innerText);\r\n    changeColor(sixthAlarm,sixthAlarm.innerText);\r\n    \r\n    addImage(firstStatus,firstStatus.innerText);\r\n    addImage(secondStatus,secondStatus.innerText);\r\n    addImage(thirdStatus,thirdStatus.innerText);\r\n    addImage(fourthStatus,fourthStatus.innerText);\r\n    addImage(fifthStatus,fifthStatus.innerText);\r\n    addImage(sixthStatus,sixthStatus.innerText);\r\n</script>\r\n<div class='card'>\r\n    <h1>${entityName}</h1>\r\n    <table class=\"table\">\r\n        <thead>\r\n            <tr>\r\n                <th>Name</th>\r\n                <th>Alarm</th>\r\n                <th>Status</th>\r\n                <th>Go to data</th>\r\n            </tr>\r\n        </thead>\r\n        <tbody>\r\n            <tr id=\"pump1Cont\">\r\n                <td>MPM1</td>\r\n                <td id=\"firstAlarm\">${pump1.alarm}</td>\r\n                <td id=\"firstStatus\">${pump1.status}</td>\r\n                <td>\r\n                    <button id=\"pump1\">\r\n                        Details\r\n                    </button>\r\n                </td>\r\n            </tr>\r\n            <tr id=\"pump2Cont\">\r\n                <td>MPM2</td>\r\n                <td id=\"secondAlarm\">${pump2.alarm}</td>\r\n                <td id=\"secondStatus\">${pump2.status}</td>\r\n                <td>\r\n                    <button id=\"pump2\">\r\n                        Details\r\n                    </button>\r\n                </td>\r\n            </tr>\r\n            <tr id=\"pump3Cont\">\r\n                <td>MPM3</td>\r\n                <td id=\"thirdAlarm\">${pump3.alarm}</td>\r\n                <td id=\"thirdStatus\">${pump3.status}</td>\r\n                <td>\r\n                    <button id=\"pump3\">\r\n                        Details\r\n                    </button>\r\n                </td>\r\n            </tr>\r\n            <tr id=\"pump4Cont\">\r\n                <td>MPM4</td>\r\n                <td id=\"fourthAlarm\">${pump4.alarm}</td>\r\n                <td id=\"fourthStatus\">${pump4.status}</td>\r\n                <td>\r\n                    <button id=\"pump4\">\r\n                        Details\r\n                    </button>\r\n                </td>\r\n            </tr>\r\n            <tr id=\"pump5Cont\">\r\n                <td>MPM5</td>\r\n                <td id=\"fifthAlarm\">${pump5.alarm}</td>\r\n                <td id=\"fifthStatus\">${pump5.status}</td>\r\n                <td>\r\n                    <button id=\"pump5\">\r\n                        Details\r\n                    </button>\r\n                </td>\r\n            </tr>\r\n            <tr id=\"pump6Cont\">\r\n                <td>MPM6</td>\r\n                <td id=\"sixthAlarm\">${pump6.alarm}</td>\r\n                <td id=\"sixthStatus\">${pump6.status}</td>\r\n                <td>\r\n                    <button id=\"pump6\">\r\n                        Details\r\n                    </button>\r\n                </td>\r\n            </tr>\r\n        </tbody>\r\n    </table>\r\n</div>",
               "cardCss" : ".card {\r\n    width: 100%;\r\n    height: 100%;\r\n    border: 2px solid #ccc;\r\n    box-sizing: border-box;\r\n}\r\nh1{\r\n    font-size: 28px;\r\n    line-height: 28px;\r\n    margin: 5px;\r\n    padding: 0;\r\n}\r\n\r\n.table {\r\n  width: 100%;\r\n  border: 1px solid #dddddd;\r\n  border-collapse: collapse; \r\n}\r\n.table th {\r\n  font-weight: bold;\r\n  padding: 5px;\r\n  background: #efefef;\r\n  border: 1px solid #dddddd;\r\n}\r\n.table td {\r\n    font-weight: 400;\r\n    position: relative;\r\n    vertical-align: baseline;\r\n    text-align: center;\r\n  border: 1px solid #dddddd;\r\n  padding: 3px;\r\n}\r\n\r\nimg {\r\n    position: absolute;\r\n    right: 5px;\r\n    width: 20px;\r\n}"
             },
             "title" : "New HTML Value Card",
@@ -234,6 +234,98 @@
           "row" : 0,
           "col" : 0,
           "id" : "0f450b26-156e-4e0b-1364-629fa1e4d312"
+        },
+        "711a8d0d-3f55-93f0-8e3e-7870dd979278" : {
+          "isSystemType" : true,
+          "bundleAlias" : "control_widgets",
+          "typeAlias" : "switch_control",
+          "type" : "rpc",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 4,
+          "sizeY" : 2.5,
+          "config" : {
+            "targetDeviceAliases" : [ ],
+            "showTitle" : false,
+            "backgroundColor" : "#e6e7e8",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "title" : "Switch control",
+              "showOnOffLabels" : true,
+              "initialValue" : false,
+              "retrieveValueMethod" : "rpc",
+              "getValueMethod" : "getSwitch",
+              "parseValueFunction" : "return data ? true : false;",
+              "setValueMethod" : "setSwitch",
+              "convertValueFunction" : "return value;",
+              "requestTimeout" : 500,
+              "requestPersistent" : false
+            },
+            "title" : "New Switch Control",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : { },
+            "decimals" : 2,
+            "datasources" : [ ],
+            "targetDeviceAliasIds" : [ "3e73c633-b69d-c0a1-8c5e-73c9c6002fb1" ]
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "711a8d0d-3f55-93f0-8e3e-7870dd979278"
+        },
+        "49b6151d-42fa-0b36-06f9-a5706b9b5d98" : {
+          "isSystemType" : true,
+          "bundleAlias" : "control_widgets",
+          "typeAlias" : "knob_control",
+          "type" : "rpc",
+          "title" : "New widget",
+          "image" : null,
+          "description" : null,
+          "sizeX" : 5,
+          "sizeY" : 4.5,
+          "config" : {
+            "targetDeviceAliases" : [ ],
+            "showTitle" : false,
+            "backgroundColor" : "#e6e7e8",
+            "color" : "rgba(0, 0, 0, 0.87)",
+            "padding" : "0px",
+            "settings" : {
+              "title" : "Knob control",
+              "initialValue" : 50,
+              "minValue" : 0,
+              "maxValue" : 100,
+              "getValueMethod" : "getPressure",
+              "setValueMethod" : "setPressure",
+              "requestTimeout" : 500,
+              "requestPersistent" : false
+            },
+            "title" : "New Knob Control",
+            "dropShadow" : true,
+            "enableFullscreen" : false,
+            "widgetStyle" : { },
+            "titleStyle" : {
+              "fontSize" : "16px",
+              "fontWeight" : 400
+            },
+            "useDashboardTimewindow" : true,
+            "showLegend" : false,
+            "actions" : { },
+            "decimals" : 2,
+            "datasources" : [ ],
+            "targetDeviceAliasIds" : [ "3e73c633-b69d-c0a1-8c5e-73c9c6002fb1" ]
+          },
+          "row" : 0,
+          "col" : 0,
+          "id" : "49b6151d-42fa-0b36-06f9-a5706b9b5d98"
         }
       },
       "states" : {
@@ -248,6 +340,18 @@
                   "sizeY" : 7,
                   "row" : 0,
                   "col" : 0
+                },
+                "711a8d0d-3f55-93f0-8e3e-7870dd979278" : {
+                  "sizeX" : 4,
+                  "sizeY" : 2,
+                  "row" : 0,
+                  "col" : 12
+                },
+                "49b6151d-42fa-0b36-06f9-a5706b9b5d98" : {
+                  "sizeX" : 5,
+                  "sizeY" : 4,
+                  "row" : 2,
+                  "col" : 12
                 }
               },
               "gridSettings" : {
@@ -359,6 +463,18 @@
             "resolveMultiple" : false,
             "stateEntityParamName" : null,
             "defaultStateEntity" : null
+          }
+        },
+        "3e73c633-b69d-c0a1-8c5e-73c9c6002fb1" : {
+          "id" : "3e73c633-b69d-c0a1-8c5e-73c9c6002fb1",
+          "alias" : "st",
+          "filter" : {
+            "type" : "singleEntity",
+            "resolveMultiple" : false,
+            "singleEntity" : {
+              "entityType" : "DEVICE",
+              "id" : "39f7a500-d3ac-11ed-b747-3d2284eff4f2"
+            }
           }
         }
       },

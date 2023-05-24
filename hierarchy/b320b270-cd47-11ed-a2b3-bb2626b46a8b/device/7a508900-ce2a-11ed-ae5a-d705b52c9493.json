@@ -45,19 +45,7 @@
     "credentialsType" : "ACCESS_TOKEN",
     "credentialsValue" : null
   },
-  "relations" : [ {
-    "additionalInfo" : null,
-    "from" : {
-      "entityType" : "ASSET",
-      "id" : "4bb1ea80-daaa-11ed-ab36-91b88e4188de"
-    },
-    "to" : {
-      "entityType" : "DEVICE",
-      "id" : "7a508900-ce2a-11ed-ae5a-d705b52c9493"
-    },
-    "type" : "Contains",
-    "typeGroup" : "COMMON"
-  } ],
+  "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
       "booleanValue" : null,

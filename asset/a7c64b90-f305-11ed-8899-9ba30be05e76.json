@@ -1,0 +1,87 @@
+{
+  "entityType" : "ASSET",
+  "entity" : {
+    "additionalInfo" : null,
+    "assetProfileId" : {
+      "entityType" : "ASSET_PROFILE",
+      "id" : "ad437c10-cca3-11ed-a47e-9ba30be05e76"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET",
+      "id" : "a7c64b90-f305-11ed-8899-9ba30be05e76"
+    },
+    "label" : null,
+    "name" : "ass1.2",
+    "ownerId" : null,
+    "type" : "default"
+  },
+  "relations" : [ {
+    "additionalInfo" : null,
+    "from" : {
+      "entityType" : "ASSET",
+      "id" : "ff370d10-eb12-11ed-8899-9ba30be05e76"
+    },
+    "to" : {
+      "entityType" : "ASSET",
+      "id" : "a7c64b90-f305-11ed-8899-9ba30be05e76"
+    },
+    "type" : "Contains",
+    "typeGroup" : "COMMON"
+  } ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "Address",
+      "lastUpdateTs" : 1684144113947,
+      "longValue" : null,
+      "strValue" : "qwqwq"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "City",
+      "lastUpdateTs" : 1684144113947,
+      "longValue" : null,
+      "strValue" : "wwwqwq"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "Region",
+      "lastUpdateTs" : 1684144113947,
+      "longValue" : null,
+      "strValue" : "wwqedxcd"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "ResponsibleEmail",
+      "lastUpdateTs" : 1684144113947,
+      "longValue" : null,
+      "strValue" : "eee@jdidi.com"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "ResponsibleFullName",
+      "lastUpdateTs" : 1684144113947,
+      "longValue" : null,
+      "strValue" : "another user1"
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "ResponsibleId",
+      "lastUpdateTs" : 1684144113947,
+      "longValue" : null,
+      "strValue" : "61c5eaa0-eb13-11ed-b2f8-5d9f729200c3"
+    } ]
+  }
+}

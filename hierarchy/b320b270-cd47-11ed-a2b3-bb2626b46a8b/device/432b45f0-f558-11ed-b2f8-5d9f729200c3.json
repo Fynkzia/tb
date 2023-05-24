@@ -1,11 +1,7 @@
 {
   "entityType" : "DEVICE",
   "entity" : {
-    "additionalInfo" : {
-      "gateway" : false,
-      "overwriteActivityTime" : false,
-      "description" : ""
-    },
+    "additionalInfo" : null,
     "customerId" : {
       "entityType" : "CUSTOMER",
       "id" : "b320b270-cd47-11ed-a2b3-bb2626b46a8b"
@@ -15,47 +11,44 @@
         "type" : "DEFAULT"
       },
       "transportConfiguration" : {
-        "type" : "MQTT"
+        "type" : "DEFAULT"
       }
     },
     "deviceProfileId" : {
       "entityType" : "DEVICE_PROFILE",
-      "id" : "15e6d430-cd6a-11ed-8f04-91b88e4188de"
+      "id" : "a0f85d10-f555-11ed-8899-9ba30be05e76"
     },
-    "externalId" : {
-      "entityType" : "DEVICE",
-      "id" : "c04c4dd0-cfc0-11ed-9d78-bb2626b46a8b"
-    },
+    "externalId" : null,
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE",
-      "id" : "c04c4dd0-cfc0-11ed-9d78-bb2626b46a8b"
+      "id" : "432b45f0-f558-11ed-b2f8-5d9f729200c3"
     },
-    "label" : "",
-    "name" : "Device001",
+    "label" : null,
+    "name" : "llkla",
     "ownerId" : {
       "entityType" : "CUSTOMER",
       "id" : "b320b270-cd47-11ed-a2b3-bb2626b46a8b"
     },
     "softwareId" : null,
-    "type" : "default"
+    "type" : "Water Meter"
   },
   "credentials" : {
-    "credentialsId" : "V9U5EcFVfGWDGdOIWh6O",
+    "credentialsId" : "hfhlRiMHLRCQiVEkOlox",
     "credentialsType" : "ACCESS_TOKEN",
     "credentialsValue" : null
   },
   "relations" : [ {
     "additionalInfo" : null,
     "from" : {
-      "entityType" : "ASSET",
-      "id" : "ff370d10-eb12-11ed-8899-9ba30be05e76"
+      "entityType" : "CUSTOMER",
+      "id" : "b320b270-cd47-11ed-a2b3-bb2626b46a8b"
     },
     "to" : {
       "entityType" : "DEVICE",
-      "id" : "c04c4dd0-cfc0-11ed-9d78-bb2626b46a8b"
+      "id" : "432b45f0-f558-11ed-b2f8-5d9f729200c3"
     },
-    "type" : "Contains",
+    "type" : "Owns",
     "typeGroup" : "COMMON"
   } ],
   "attributes" : {
@@ -64,7 +57,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1682416886016,
+      "lastUpdateTs" : 1684406713480,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -72,15 +65,23 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1680266888273,
-      "longValue" : 1680266888223,
+      "lastUpdateTs" : 1684406713480,
+      "longValue" : 1684406713469,
       "strValue" : null
     }, {
-      "booleanValue" : true,
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityTimeout",
+      "lastUpdateTs" : 1684399495357,
+      "longValue" : 7200000,
+      "strValue" : null
+    }, {
+      "booleanValue" : false,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "setted",
-      "lastUpdateTs" : 1684407197389,
+      "lastUpdateTs" : 1684490277211,
       "longValue" : null,
       "strValue" : null
     } ],

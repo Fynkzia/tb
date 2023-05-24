@@ -74,6 +74,7 @@
       },
       "name" : "Generate Report",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.report.TbGenerateReportNode"
     }, {
       "additionalInfo" : {
@@ -94,6 +95,7 @@
       },
       "name" : "If send email",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.filter.TbJsFilterNode"
     }, {
       "additionalInfo" : {
@@ -114,6 +116,7 @@
       },
       "name" : "Prepare email metadata",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbTransformMsgNode"
     }, {
       "additionalInfo" : {
@@ -137,6 +140,7 @@
       },
       "name" : "To report email",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.mail.TbMsgToEmailNode"
     }, {
       "additionalInfo" : {
@@ -162,6 +166,7 @@
       },
       "name" : "Send report",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.mail.TbSendEmailNode"
     } ],
     "ruleChainConnections" : null

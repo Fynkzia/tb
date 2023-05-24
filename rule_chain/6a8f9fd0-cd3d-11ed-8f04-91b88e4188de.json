@@ -51,6 +51,7 @@
       },
       "name" : "split",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.transform.TbSplitArrayMsgNode"
     }, {
       "additionalInfo" : {
@@ -72,6 +73,7 @@
       },
       "name" : "logSuccess",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.action.TbLogNode"
     }, {
       "additionalInfo" : {
@@ -93,6 +95,7 @@
       },
       "name" : "logFail",
       "ruleChainId" : null,
+      "singletonMode" : false,
       "type" : "org.thingsboard.rule.engine.action.TbLogNode"
     } ],
     "ruleChainConnections" : null

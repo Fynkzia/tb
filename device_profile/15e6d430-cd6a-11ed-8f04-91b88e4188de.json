@@ -3,6 +3,7 @@
   "entity" : {
     "default" : true,
     "defaultDashboardId" : null,
+    "defaultEdgeRuleChainId" : null,
     "defaultQueueName" : null,
     "defaultRuleChainId" : {
       "entityType" : "RULE_CHAIN",
@@ -31,9 +32,12 @@
       },
       "transportConfiguration" : {
         "type" : "MQTT",
+        "deviceAttributesSubscribeTopic" : "v1/devices/me/attributes",
         "deviceAttributesTopic" : "v1/devices/me/attributes",
         "deviceTelemetryTopic" : "v1/devices/me/telemetry",
         "sendAckOnValidationException" : false,
+        "sparkplug" : false,
+        "sparkplugAttributesMetricNames" : null,
         "transportPayloadTypeConfiguration" : {
           "transportPayloadType" : "JSON"
         }
